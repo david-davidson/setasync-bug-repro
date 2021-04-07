@@ -25,7 +25,7 @@
           if (gist) {
             buildBodyContent(gist, function (content, error) {
               if (content) {
-                Office.context.mailbox.item.body.setSelectedDataAsync(content,
+                Office.context.mailbox.item.body.setAsync(content,
                   {coercionType: Office.CoercionType.Html}, function(result) {
                     if (result.status == 'failed') {
                       showError('Could not insert Gist: ' + result.error.message);
